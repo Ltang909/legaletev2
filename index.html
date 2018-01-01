@@ -1,10 +1,12 @@
+
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LegaLete Athletics</title> 
-<link rel="icon" href="Images/Logo.png">
+<link rel="icon" href="Images/icnonly.png">
+<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,16 +15,7 @@
 <body>
 <div class="nav-bar">
 <div class="logo">
-<img src="Images/Logov2.png" style="width: 100%;" /><br/>
-<center>
-<a href="https://www.facebook.com/Legalete-Athletics-2067109213508620/?ref=br_rs" target="_blank">
-<img src="Images/Facebook.png" style="padding-left: 3%; padding-right: 3%;">
-</a>
-<a href="https://www.youtube.com/channel/UCYQMfIwdMDnQjHD9SAeYUhA?view_as=subscriber" target="_blank">
-<img src="Images/Youtube.png" style="padding-left: 3%; padding-right: 3%;">
-</a>
-<a href="https://www.instagram.com/legaleteathletics/" target="_blank">
-<img src="Images/Instagram.png" style="padding-left: 3%; padding-right: 3%;"></a></center>
+<img src="Images/legalete.png" style="width: 100%; padding: 11%;" /><br/>
 </div>
 <div id="options">
 <div class="option">
@@ -46,6 +39,7 @@ About Us
 </a>
 </div>
 </div>
+<br/>
 </div>
 <div class="fullscreen-bg">
     <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
@@ -55,10 +49,69 @@ About Us
 	
 	</div>
 	</div>
+	<div id="footer">
+<h1>Follow Us</h1>
+<div class="mdaicns">
+<center>
+<div class="optionsm">
+<a href="https://www.facebook.com/Legalete-Athletics-2067109213508620/?ref=br_rs" target="_blank">
+<img src="Images/Facebook.png" style="width: 100%; max-width: 25px;"> 
+</a>
+</div>
+<div class="optionsm">
+<a href="https://www.youtube.com/channel/UCYQMfIwdMDnQjHD9SAeYUhA?view_as=subscriber" target="_blank">
+<img src="Images/Youtube.png" style="width: 100%; max-width: 25px;">
+</a>
+</div>
+<div class="optionsm">
+<a href="https://www.instagram.com/legaleteathletics/" target="_blank">
+<img src="Images/Instagram.png" style="width: 100%; max-width: 25px;"></a></div></center>
+</div>
+</div>
 </body>
 </html>
-
 <style>
+#footer h1 {
+    margin: 0px !important;
+    padding: 2%;
+}
+
+div#footer {
+    width: 100%;
+    text-align: center;
+    background: #000;
+	color: #fff;
+	font-weight: 800;
+	text-transform: uppercase;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+.fullscreen-bg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important;
+}
+
+video.fullscreen-bg__video {
+    width: 100%;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    z-index: -1;
+    overflow: hidden;
+}
+
+
+.optionsm{
+padding-left: 3%;
+padding-right: 3%;
+display: inline-block;
+width: 20%;
+}
+
+.mdaicns{
+display: inline-block;
+}
+
 .logo a{
 text-decoration: none;
 }
@@ -99,17 +152,11 @@ font-size: 1.4em;
 }
 
 .logo{
-width: 20%;
+width: 15%;
 filter: brightness(9);
 display: inline-block;
 }
 
-video.fullscreen-bg__video {
-    width: 100%;
-	z-index: -1;
-	max-height: 100%;
-	overflow: hidden;
-}
 body{
 margin: 0px;
 }
@@ -125,3 +172,23 @@ margin: 0px;
     filter: brightness(0.1);
 }
 </style>
+
+
+<script>
+var $video  = $('video'),
+    $window = $(window); 
+
+$(window).resize(function(){
+    var height = $window.height();
+    $video.css('height', height);
+
+    var videoWidth = $video.width(),
+        windowWidth = $window.width(),
+    marginLeftAdjust =   (windowWidth - videoWidth) / 2;
+
+    $video.css({
+        'height': height, 
+        'marginLeft' : marginLeftAdjust
+    });
+}).resize();
+</script>
